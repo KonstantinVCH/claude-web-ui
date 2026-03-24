@@ -1,2 +1,2 @@
 .env
-litellm.log
+*.log
