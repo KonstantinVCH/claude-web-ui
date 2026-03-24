@@ -44,7 +44,7 @@ if errorlevel 1 (
 :: Start LiteLLM proxy
 echo.
 echo Starting LiteLLM proxy on port 4000...
-start "LiteLLM" /min cmd /c "set PYTHONUTF8=1 && set ANTHROPIC_API_KEY=%ANTHROPIC_API_KEY% && set NO_PROXY=* && set no_proxy=* && litellm --model anthropic/claude-sonnet-4-6 --port 4000"
+start "LiteLLM" /min cmd /c "set PYTHONUTF8=1 && set ANTHROPIC_API_KEY=%ANTHROPIC_API_KEY% && set NO_PROXY=api.anthropic.com,localhost,127.0.0.1 && set no_proxy=api.anthropic.com,localhost,127.0.0.1 && litellm --model anthropic/claude-sonnet-4-6 --port 4000"
 
 :: Wait for containers to be healthy
 echo.
